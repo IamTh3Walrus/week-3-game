@@ -1,0 +1,65 @@
+*{
+	box-sizing: border-box;
+}
+
+body{
+	background:#000;
+	font-family: Helvetica, Arial, "Lucida Grande", sans-serif;
+}
+
+.container{
+	width: 100%;
+	max-width: 960px;
+	margin: 0 auto;
+	clear: both;
+}
+.column1{
+	float:left;
+	border: 5px dashed #fff;
+	width: 40%;
+	background-color:#000;
+	margin-left: 250px;
+	margin-top: 100px;
+	padding-bottom: 400px;
+
+}
+
+.column2{
+	float:left;
+	border: 5px dotted #fff;
+	width: 30%;
+	background-color:#000;
+	margin-top:100px;
+	padding-bottom: 400px;
+
+}
+
+p{
+	color:#fff;
+	text-align: center;
+	font-size: 20px;
+}
+
+.header{
+	width: 100%;
+}
+
+#beatles-image{
+	width:400px;
+	height: 200px;
+}
+
+#beatles-main{
+	width:200px
+	height:200px;
+	margin-left: 20px;
+	margin-right: 20px;
+	margin-top: 10px;
+}
+
+h1{
+	color:#fff;
+	float:right;
+	font-size: 100px;
+	margin-top: 50px;
+}
