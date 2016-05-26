@@ -4,22 +4,31 @@ var userGuess = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm'
 var wins = 0;
 var losses = 0;
 
+function init(){
+	computerGuess = computerChoices[Math.floor(Math.random()* computerChoices.length)];
+}
 
-
+var computerGuess = computerChoices[Math.floor(Math.random()* computerChoices.length)];
+alert('computerGuess=' + computerGuess);
 document.onkeyup = function(event) {
 	var userGuess = String.fromCharCode(event.keyCode).toLowerCase();
+	alert('userGuess=' + userGuess);
 	
-	var computerGuess = computerChoices[Math.floor(Math.random()* computerChoices.length)];
-	 if(computerChoices === userGuess){
+	
+	 if(computerGuess === userGuess){
 	 	wins++;
-	 }else if(computerChoices !== userGuess)
-	 	losses++;
+	 	init();
+	 }
 
-	 	if(losses === 8){
+	 if(computerGuess != userGuess){
+	 	losses++;
+	 	init();
+	 }
+	 	
+
+	 if(losses === 8){
 	 		alert('You Lose')
-	 		
-	 		
-		}
+	 }
 
 	 var html = "<h1>The Psychic Game</h1>" +
 		"<p>wins: " + 
@@ -32,6 +41,9 @@ document.onkeyup = function(event) {
 		document.querySelector('#game').innerHTML = html;
 
 	}
+
+
+
 
 
 
